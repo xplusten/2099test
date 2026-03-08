@@ -20,6 +20,7 @@ public class Menu {
             System.out.println("3. View Students");
             System.out.println("4. View Student Courses");
             System.out.println("5. Exit");
+            System.out.println("6. Expel Student");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
@@ -38,6 +39,9 @@ public class Menu {
                     break;
                 case 5:
                     return;
+                case 6:
+                    expelStudent();
+                    break;
             }
         }
     }
@@ -85,6 +89,17 @@ public class Menu {
 
         if (student != null) {
             student.printCourses();
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+
+    private void expelStudent() {
+        System.out.print("Enter student ID to expel: ");
+        int id = scanner.nextInt();
+        boolean removed = manager.removeStudent(id);
+        if (removed) {
+            System.out.println("Student " + id + " has been expelled.");
         } else {
             System.out.println("Student not found.");
         }
