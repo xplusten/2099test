@@ -20,6 +20,7 @@ public class Menu {
             System.out.println("3. View Students");
             System.out.println("4. View Student Courses");
             System.out.println("5. Exit");
+            System.out.println("6. Add Dummy Data");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -39,6 +40,9 @@ public class Menu {
                     break;
                 case 5:
                     return;
+                case 6:
+                    addDummyData();
+                    break;
             }
         }
     }
@@ -90,4 +94,18 @@ public class Menu {
             System.out.println("Student not found.");
         }
     }
+
+    private void addDummyData() {
+        Student s1 = new Student("Alice", 1);
+        s1.addCourse(new Course("Math", 90));
+        s1.addCourse(new Course("Science", 85));
+        manager.addStudent(s1);
+
+        Student s2 = new Student("Bob", 2);
+        s2.addCourse(new Course("Math", 75));
+        s2.addCourse(new Course("History", 80));
+        manager.addStudent(s2);
+    }
+
+
 }
