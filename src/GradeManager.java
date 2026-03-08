@@ -27,4 +27,19 @@ public class GradeManager {
             System.out.println(s);
         }
     }
+
+    public boolean removeStudent(int id) {
+        Student toRemove = null;
+        for (Student s : students) {
+            if (s.getId() == id) {
+                toRemove = s;
+                break;
+            }
+        }
+        if (toRemove != null) {
+            students.remove(toRemove);
+            return true;
+        }
+        return false;
+    }
 }
