@@ -21,7 +21,7 @@ public class Menu {
             System.out.println("4. View Student Courses");
             System.out.println("5. Exit");
             System.out.println("6. Add Dummy Data");
-            System.out.print("7: Remove Student");
+            System.out.print("7: Remove  badStudent");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
