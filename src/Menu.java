@@ -20,7 +20,6 @@ public class Menu {
             System.out.println("3. View Students");
             System.out.println("4. View Student Courses");
             System.out.println("5. Exit");
-
             int choice = scanner.nextInt();
             scanner.nextLine();
 
