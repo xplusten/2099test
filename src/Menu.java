@@ -45,7 +45,7 @@ public class Menu {
                     addDummyData();
                     break;
                 case 7:
-                    manager.removeStudent();
+                    removeStudent();
                     break;
             }
         }
@@ -111,5 +111,16 @@ public class Menu {
         manager.addStudent(s2);
     }
 
-
+    private void removeStudent() {
+        System.out.print("Enter student ID to remove: ");
+        int id = scanner.nextInt();
+        boolean removed = manager.removeStudent(id);
+        if (removed) {
+            System.out.println("Student " + id + " has been removed.");
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
 }
+
+

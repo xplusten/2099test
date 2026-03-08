@@ -28,7 +28,7 @@ public class GradeManager {
         }
     }
 
-    public boolean removeStudent() {
+    public boolean removeStudent(int id) {
         Student toRemove = null;
         for (Student s : students) {
             if (s.getId() == id) {
